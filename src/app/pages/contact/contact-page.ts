@@ -12,10 +12,9 @@ export default class ContactPage implements OnInit {
   private platformId = inject(PLATFORM_ID);
 
   ngOnInit(): void {
-    if(!isPlatformBrowser(this.platformId)) {
-      document.getElementById('contact-page')?.classList.add('d-none');
-      console.log('No se puede ejecutar en el servidor');
-    }
+    // if(isPlatformBrowser(this.platformId)) {
+      // Aquí puedes colocar código que solo se ejecutará en el navegador, como por ejemplo, manipulación del DOM o uso de APIs del navegador.
+    // }
     this.title.setTitle('Contact Page');
     this.meta.updateTag({
       name: 'description',
