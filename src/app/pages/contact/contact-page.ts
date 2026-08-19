@@ -1,4 +1,5 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
@@ -8,8 +9,13 @@ import { Title, Meta } from '@angular/platform-browser';
 export default class ContactPage implements OnInit {
    private title = inject(Title);
   private meta = inject(Meta);
+  private platformId = inject(PLATFORM_ID);
 
   ngOnInit(): void {
+    if(!isPlatformBrowser(this.platformId)) {
+      document.getElementById('contact-page')?.classList.add('d-none');
+      console.log('No se puede ejecutar en el servidor');
+    }
     this.title.setTitle('Contact Page');
     this.meta.updateTag({
       name: 'description',
