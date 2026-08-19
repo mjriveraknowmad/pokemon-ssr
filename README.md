@@ -2,6 +2,9 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.5.
 
+
+El código de este repositorio se realizó siguiendo el curso de [https://www.udemy.com/course/angular-pro-siguiente-nivel/ ](https://www.udemy.com/course/angular-pro-siguiente-nivel/), en concreto es el de la sección de SSR - SSG - Hydration ( aunque quizás vaya a tener algunas diferencias, porque estoy usando algunas librerías más actualizadas )
+
 ## Development server
 
 To start a local development server, run:
