@@ -68,4 +68,11 @@ describe('App', () => {
     expect(compiled.querySelector('router-outlet')).toBeTruthy();
   });
 
+  // En caso de que se quiere comprobar que el HTML no se ha modificado. Cuando se ejecuta por primera vez, se genera un snapshot y se guarda en el proyecto. En las siguientes ejecuciones, se compara con el snapshot guardado.
+  // Si queremos generar otro snapshot, se puede pulsar la tecla u en la terminal y se generará un nuevo snapshot, cuando se está ejecutando el test.
+  it('should match snapshot', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    expect(compiled.innerHTML).toMatchSnapshot();
+  });
 });
