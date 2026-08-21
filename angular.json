@@ -28,12 +28,14 @@
               "src/styles.css"
             ],
             "server": "src/main.server.ts",
-            "outputMode": "server",
             "security": {
               "allowedHosts": ["localhost", "localhost:4000"]
             },
             "ssr": {
               "entry": "src/server.ts"
+            },
+            "prerender": {
+              "routesFile": "routes.txt"
             }
           },
           "configurations": {

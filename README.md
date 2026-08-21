@@ -29,6 +29,11 @@ For a complete list of available schematics (such as `components`, `directives`,
 ng generate --help
 ```
 
+## Generar routes.txt, usado para las rutas prerenderizadas
+```bash
+node --watch scripts/prerender-routes.js
+```
+
 ## Building
 
 Para construir el proyecto
